@@ -4,11 +4,46 @@
 	padding: 0;
 	border: 0;
 	font-size: inherit;
-	font-weight: inherit;
-	font-family: inherit;
-	text-decoration: inherit;
-	line-height: inherit;
+	font-weight: inherit; /*makes things bold*/
+	font-family: inherit; /* What font should be used on the page */
+	text-decoration: inherit; /*used to make things that sould be underlined*/
+	line-height: inherit; /*how much space is between the lines...if you're typing a paper..double spacing*/
 	color: inherit;
 
-	transform:rotate(45deg);
+	/*transform:rotate(45deg);*/
 }
+html, body{
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 18px;
+	line-height: 30px; /*Amount of space in between lines*/
+	color:#444; /*Dark grey*/
+	text-shadow: 1px 1px 0px #fff;	
+}
+body{
+	text-align: center; /*centers everything on the page*/
+}
+h1{
+	font-size: 36px;
+	line-height: 50px;
+	font-weight: bold;
+}
+h1 sub{
+	color: #aaa;
+	vertical-align: baseline;
+}
+h1 sub:before{
+	content: "("
+}
+h1 sub:after{
+	content: ")"
+}
+img{
+	border-radius: 50%; /*rounds corners on images*/
+}
+.hero {
+	outline: 1px solid red;
+	height: 100vh; /*vh stands for vh.. view port.. the size of the screen of the device your browsing on*/
+	/*display:flex; flex/flex box is a css trick recently introduced.. gives lots of control of how you want to align things on the screen */
+	flex-direction:column;/*aligns things down the page vertically*/
+	justify-content:center;
+}   
