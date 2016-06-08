@@ -40,15 +40,35 @@ h1 sub:before{
 h1 sub:after{
 	content: ")"
 }
+h2{
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: bold;
+}
+a{
+	color: #000066;
+}
+a:hover{
+	color: #369;
+}
+
+section{
+	border-top: 2px dashed #eee;
+	padding: 50px 0;
+	max-width: 800px;
+	margin: 0 auto;
+
+}
 img{
 	border-radius: 50%; /*rounds corners on images*/
 }
 .hero {
-	outline: 1px solid red;
 	height: 100vh; /*vh stands for vh.. view port.. the size of the screen of the device your browsing on*/
 	/*display:flex; flex/flex box is a css trick recently introduced.. gives lots of control of how you want to align things on the screen */
 	flex-direction:column;/*aligns things down the page vertically*/
 	justify-content:center;
+	border: 0;
+	padding: 0;
 }  
 .hero img{
 	width: 100%; /*This adjust the size of your image*/
@@ -63,7 +83,7 @@ img{
 	margin-left: auto;/*to center images you change your margins left and right*/
 	margin-right: auto;
 	transition:transform 1s, box-shadow 1s;
-	background-image:url("images/mklogo.png");
+	/*background-image:url("images/mklogo.png");*/
 	background-size: contain;
 
 }
@@ -74,4 +94,43 @@ img{
 
 }
 .diveshot:hover img{
-	opacity: 0;
+	/*opacity: 0;*/
+}
+
+.list li{
+	display: inline;
+	font-weight: bold;
+}
+.list li:not(:last-child) :after{
+	content: ",";
+}
+
+.blocklist > li{
+	display: flex;
+	justify-content:center;
+	border-style: solid;
+	border-width: 10px;
+	border-color:#fff #eee;
+
+	}
+.blocklist > li > div{
+	flex-grow:1;
+	align-self: center;
+}
+.blocklist > li > img{
+	width: 150px;
+	height: 150px;
+	margin: 0 10px;
+}
+.blocklist > li:nth-child(odd){
+	flex-direction:row-reverse;
+	text-align:left;
+	border-left-width:0;
+
+}
+.blocklist > li:nth-child(even){
+	flex-direction:row-reverse;
+	text-align:right;
+	border-right-width:0;
+
+}
