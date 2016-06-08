@@ -19,12 +19,15 @@ html, body{
 	color:#444; /*Dark grey*/
 	text-shadow: 1px 1px 0px #fff;	
 }
+
 body{
 	text-align: center; /*centers everything on the page*/
+	color: #ccf2ff;
+	background-color: #0086b3;
 }
 h1{
 	font-size: 36px;
-	line-height: 50px;
+	line-height: 100px;
 	font-weight: bold;
 }
 h1 sub{
@@ -46,4 +49,29 @@ img{
 	/*display:flex; flex/flex box is a css trick recently introduced.. gives lots of control of how you want to align things on the screen */
 	flex-direction:column;/*aligns things down the page vertically*/
 	justify-content:center;
-}   
+}  
+.hero img{
+	width: 100%; /*This adjust the size of your image*/
+	height: 100%;
+} 
+/*gets img to hover*/
+.diveshot{
+	width: 300px;
+	height:300px;
+	border-radius: 50%;
+	overflow: hidden; /*anything that overflows beyond the border will be hidden using this property*/
+	margin-left: auto;/*to center images you change your margins left and right*/
+	margin-right: auto;
+	transition:transform 1s, box-shadow 1s;
+	background-image:url("images/mklogo.png");
+	background-size: contain;
+
+}
+.diveshot:hover{
+	transform:rotate(360deg);
+	box-shadow: 0px 0px 100px 50px #fc0;
+				0px 0px 100px 20px #960 inset;
+
+}
+.diveshot:hover img{
+	opacity: 0;
